@@ -1,0 +1,30 @@
+---
+description: Global architecture rules — applies to every file in the project
+alwaysApply: true
+---
+
+# Architecture Rules
+
+Use Feature First Architecture.
+
+Frontend code belongs in:
+frontend/src/features/<feature-name>
+
+Backend code belongs in:
+backend/app/modules/<module-name>
+
+Never create at application root:
+- controllers/
+- services/
+- repositories/
+
+Every feature and module must be self-contained.
+
+Cross-feature imports are forbidden.
+If two features share logic, extract it to shared/.
+
+Business logic belongs only inside service.py (backend) or hooks/ (frontend).
+
+Prefer modifying existing files over creating new files.
+
+Do not introduce alternative architectural patterns without an ADR in docs/decisions/.

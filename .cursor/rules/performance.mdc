@@ -1,0 +1,22 @@
+---
+description: Performance standards
+globs: **/*.{ts,tsx,py}
+---
+
+# Performance Standards
+
+Database:
+- No N+1 queries — use joinedload() or selectinload() explicitly
+- Never fetch unbounded datasets — all list queries must be paginated
+- Select explicit columns — avoid SELECT *
+- Index foreign keys and all columns used in WHERE or ORDER BY
+- Cache expensive read operations — TTL must be defined, never infinite
+
+API:
+- p95 response time budget: reads < 500ms, writes < 1000ms
+- Avoid redundant API calls — use React Query caching on the frontend
+
+Frontend:
+- Lazy-load routes and heavy components
+- No API calls inside render — use hooks with React Query
+- No unnecessary re-renders — memoize where profiled as needed (not by default)

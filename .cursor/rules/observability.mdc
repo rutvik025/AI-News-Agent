@@ -1,0 +1,38 @@
+---
+description: Logging and observability standards
+globs: **/*.{ts,tsx,py}
+---
+
+# Observability Standards
+
+Never use print() or console.log() in application code.
+
+Backend — use structlog:
+import structlog
+logger = structlog.get_logger(__name__)
+
+logger.info("user.created", user_id=user.id, email=user.email)
+logger.error("payment.failed", user_id=user.id, error=str(e), provider="stripe")
+
+Frontend — use the shared logger utility:
+import { logger } from '@/shared/utils/logger'
+logger.info('auth.login_success', { userId })
+logger.error('api.request_failed', { endpoint, statusCode })
+
+What must be logged:
+- All unhandled exceptions with stack trace
+- All external API calls: service name, endpoint, duration, status
+- All critical business events: user created, payment processed, etc.
+- All auth events: login, logout, failed attempts, token refresh
+
+What must never be logged:
+- Passwords, tokens, or API keys
+- PII beyond operational necessity
+- Raw request bodies that may contain sensitive data
+
+Log levels:
+DEBUG   → local dev only, never production
+INFO    → normal business events
+WARNING → recoverable issues, degraded state
+ERROR   → failures requiring attention
+CRITICAL → system-level failures, immediate action required

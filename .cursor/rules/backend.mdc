@@ -1,0 +1,34 @@
+---
+description: FastAPI/Python backend standards
+globs: backend/**/*.py
+---
+
+# Backend Standards
+
+Each module contains:
+router.py       ← API endpoints only
+service.py      ← Business logic only
+repository.py   ← Database access only
+schemas.py      ← Pydantic v2 request/response models
+models.py       ← ORM models
+dependencies.py ← FastAPI dependency injection
+constants.py    ← Module constants
+exceptions.py   ← Module exception classes
+
+Layer rules (strictly enforced):
+- router.py calls service.py only — never repository.py
+- service.py calls repository.py only — never raw DB sessions
+- repository.py owns all SQL and ORM queries
+- Never place business logic in router.py
+
+Python standards:
+- Type hints required on every function (args + return type)
+- mypy --strict must pass with zero errors
+- Pydantic v2 for all schemas
+- Dependency injection via FastAPI Depends()
+
+Never use print() — use structlog structured logging.
+
+Imports:
+- Absolute imports only
+- from app.modules.<module>.<file> import <Name>

@@ -1,0 +1,43 @@
+---
+description: API design and response standards
+globs: backend/**/router.py
+---
+
+# API Standards
+
+All endpoints must use versioning:
+/api/v1/<resource>
+
+Success response envelope:
+{
+  "success": true,
+  "data": {},
+  "message": "Human-readable confirmation"
+}
+
+Error response envelope:
+{
+  "success": false,
+  "error": {
+    "code": "ERROR_CODE",
+    "message": "Human-readable description",
+    "details": {}
+  }
+}
+
+Standard error codes:
+VALIDATION_ERROR   → 422
+NOT_FOUND          → 404
+UNAUTHORIZED       → 401
+FORBIDDEN          → 403
+CONFLICT           → 409
+INTERNAL_ERROR     → 500
+RATE_LIMITED       → 429
+
+Rules:
+- Never return raw ORM/database objects
+- All list endpoints must support pagination: ?page=1&limit=20
+- Pagination responses must include: total, page, limit, has_next
+- Use correct HTTP status codes — never 200 for errors
+- All inputs validated via Pydantic schemas before reaching the service layer
+- Rate limiting required on all public-facing endpoints

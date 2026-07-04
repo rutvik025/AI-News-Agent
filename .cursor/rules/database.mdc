@@ -1,0 +1,31 @@
+---
+description: Database and migration standards
+globs: backend/**/*.{py,sql}
+---
+
+# Database Standards
+
+Schema changes:
+- All schema changes must be migration based — never modify schema manually
+- One migration per logical change; never bundle unrelated schema changes
+- Migrations live in `backend/migrations/` (Alembic or equivalent)
+- DB session/engine setup belongs in `backend/app/db/` only
+
+ORM and queries:
+- ORM models belong only in `models.py` per module
+- All SQL and ORM queries belong only in `repository.py` — never in service or router layers
+- Parameterized queries only — never string-concatenated SQL
+- No N+1 queries — use joinedload() or selectinload() explicitly
+- Never fetch unbounded datasets — all list queries must be paginated
+- Select explicit columns — avoid SELECT *
+- Index foreign keys and all columns used in WHERE or ORDER BY
+
+Naming:
+- Tables: `snake_case`, plural (`users`, `report_entries`)
+- Columns: `snake_case`
+- Foreign keys: `<referenced_table_singular>_id`
+
+Migrations:
+- Include both upgrade and downgrade paths when feasible
+- Name migrations descriptively: `add_users_email_index`, not `migration_003`
+- Review migration SQL for locking impact on large tables before merge

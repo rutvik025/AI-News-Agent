@@ -1,0 +1,33 @@
+---
+description: Security standards
+alwaysApply: true
+---
+
+# Security Standards
+
+Never expose secrets, credentials, or tokens in code, logs, or error responses.
+Never hardcode credentials — always use environment variables.
+All env vars must be in .env.example with descriptions.
+
+Input handling:
+- Validate and sanitize all user inputs
+- Parameterized queries only — never string-concatenated SQL
+- Validate file upload mime types server-side — never trust file extension alone
+
+Authorization:
+- Enforce authorization checks at the service layer, not only the router
+- Every endpoint must have explicit auth/permission check defined
+
+Passwords and tokens:
+- Passwords hashed with bcrypt, minimum 12 rounds
+- Access tokens: 15 minute expiry
+- Refresh tokens: rotation on every use
+- JWTs must never contain sensitive data in the payload
+
+CORS:
+- Explicit allowlist only in all environments
+- Never use wildcard (*) in production
+
+Dependencies:
+- npm audit run in CI — fail on high or critical severity
+- pip audit run in CI — fail on high or critical severity

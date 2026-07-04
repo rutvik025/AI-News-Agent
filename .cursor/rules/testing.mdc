@@ -1,0 +1,33 @@
+---
+description: Testing standards for frontend and backend
+globs: **/*.{test.ts,test.tsx,spec.ts,spec.tsx,py}
+---
+
+# Testing Standards
+
+Coverage requirements:
+- New business logic requires unit tests
+- All new endpoints require integration tests
+- Tests must be colocated in the feature or module `tests/` subfolder
+
+Test placement:
+- Unit tests → `frontend/src/features/<feature>/tests/` or `backend/app/modules/<module>/tests/`
+- Integration/e2e tests spanning multiple modules → root `tests/` folder only
+- Never dump all tests into a single top-level folder
+
+Backend:
+- Use pytest with async support for FastAPI endpoints
+- Mock external services at the repository or HTTP client boundary
+- Test service.py business logic in isolation from DB when practical
+- Integration tests use a test database — never production
+
+Frontend:
+- Use React Testing Library for component tests
+- Test hooks independently where business logic lives
+- Mock API calls at the api/ layer, not inside components
+- Do not test implementation details — test user-visible behavior
+
+General:
+- Tests must be deterministic — no flaky time or random dependencies
+- One logical assertion focus per test; descriptive test names
+- No skipped tests without a linked issue and justification

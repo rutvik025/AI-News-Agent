@@ -1,0 +1,489 @@
+sources:
+  # Category 1: AI Research (10 sources)
+  - name: ArXiv cs.AI
+    url: https://rss.arxiv.org/rss/cs.AI
+    category: ai_research
+    credibility: 1.0
+    priority: 1
+    update_frequency: daily
+    active: true
+
+  - name: ArXiv cs.LG
+    url: https://rss.arxiv.org/rss/cs.LG
+    category: ai_research
+    credibility: 1.0
+    priority: 1
+    update_frequency: daily
+    active: true
+
+  - name: ArXiv cs.NE
+    url: https://rss.arxiv.org/rss/cs.NE
+    category: ai_research
+    credibility: 1.0
+    priority: 1
+    update_frequency: daily
+    active: true
+
+  - name: ArXiv cs.CL
+    url: https://rss.arxiv.org/rss/cs.CL
+    category: ai_research
+    credibility: 1.0
+    priority: 1
+    update_frequency: daily
+    active: true
+
+  - name: ArXiv cs.RO
+    url: https://rss.arxiv.org/rss/cs.RO
+    category: ai_research
+    credibility: 1.0
+    priority: 1
+    update_frequency: daily
+    active: true
+
+  - name: ArXiv cs.CV
+    url: https://rss.arxiv.org/rss/cs.CV
+    category: ai_research
+    credibility: 1.0
+    priority: 1
+    update_frequency: daily
+    active: true
+
+  - name: ArXiv cs.IR
+    url: https://rss.arxiv.org/rss/cs.IR
+    category: ai_research
+    credibility: 0.95
+    priority: 1
+    update_frequency: daily
+    active: true
+
+  - name: ArXiv stat.ML
+    url: https://rss.arxiv.org/rss/stat.ML
+    category: ai_research
+    credibility: 1.0
+    priority: 1
+    update_frequency: daily
+    active: true
+
+  # Feed moved to HuggingFace HTML — no public RSS (returns HTML, not XML)
+  - name: Papers With Code
+    url: https://paperswithcode.com/latest/rss.xml
+    category: ai_research
+    credibility: 0.95
+    priority: 1
+    update_frequency: daily
+    active: false
+
+  - name: Google Research Blog
+    url: https://blog.research.google/feeds/posts/default
+    category: ai_research
+    credibility: 0.95
+    priority: 1
+    update_frequency: weekly
+    active: true
+
+  # Category 2: Tech News (10 sources)
+  - name: TechCrunch AI
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+    category: tech_news
+    credibility: 0.85
+    priority: 2
+    update_frequency: hourly
+    active: true
+
+  - name: VentureBeat AI
+    url: https://venturebeat.com/category/ai/feed/
+    category: tech_news
+    credibility: 0.85
+    priority: 2
+    update_frequency: hourly
+    active: true
+
+  - name: The Verge AI
+    url: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+    category: tech_news
+    credibility: 0.85
+    priority: 2
+    update_frequency: hourly
+    active: true
+
+  - name: Wired AI
+    url: https://www.wired.com/feed/tag/ai/latest/rss
+    category: tech_news
+    credibility: 0.85
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  - name: MIT Technology Review AI
+    url: https://www.technologyreview.com/topic/artificial-intelligence/feed
+    category: tech_news
+    credibility: 0.90
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  - name: Ars Technica
+    url: https://feeds.arstechnica.com/arstechnica/technology-lab
+    category: tech_news
+    credibility: 0.85
+    priority: 2
+    update_frequency: hourly
+    active: true
+
+  - name: ZDNet AI
+    url: https://www.zdnet.com/topic/artificial-intelligence/rss.xml
+    category: tech_news
+    credibility: 0.80
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  - name: CNET News
+    url: https://www.cnet.com/rss/news/
+    category: tech_news
+    credibility: 0.75
+    priority: 3
+    update_frequency: hourly
+    active: true
+
+  - name: Engadget
+    url: https://www.engadget.com/rss.xml
+    category: tech_news
+    credibility: 0.80
+    priority: 2
+    update_frequency: hourly
+    active: true
+
+  - name: IEEE Spectrum
+    url: https://spectrum.ieee.org/feeds/feed.rss
+    category: tech_news
+    credibility: 0.90
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  # Category 3: Developer Communities (10 sources)
+  - name: Hacker News AI
+    url: https://hnrss.org/newest?q=AI+machine+learning
+    category: developer
+    credibility: 0.80
+    priority: 2
+    update_frequency: hourly
+    active: true
+
+  - name: GitHub Blog
+    url: https://github.blog/feed/
+    category: developer
+    credibility: 0.85
+    priority: 2
+    update_frequency: weekly
+    active: true
+
+  - name: Stack Overflow Blog
+    url: https://stackoverflow.blog/feed/
+    category: developer
+    credibility: 0.85
+    priority: 3
+    update_frequency: weekly
+    active: true
+
+  - name: Dev.to AI
+    url: https://dev.to/feed/tag/ai
+    category: developer
+    credibility: 0.75
+    priority: 3
+    update_frequency: hourly
+    active: true
+
+  - name: Lobsters AI
+    url: https://lobste.rs/t/ai.rss
+    category: developer
+    credibility: 0.80
+    priority: 3
+    update_frequency: daily
+    active: true
+
+  - name: InfoQ AI/ML
+    url: https://feed.infoq.com/ai-ml-data-eng/
+    category: developer
+    credibility: 0.85
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  - name: DZone AI
+    url: https://feeds.dzone.com/ai
+    category: developer
+    credibility: 0.75
+    priority: 3
+    update_frequency: daily
+    active: true
+
+  - name: Towards Data Science
+    url: https://towardsdatascience.com/feed
+    category: developer
+    credibility: 0.80
+    priority: 3
+    update_frequency: daily
+    active: true
+
+  - name: Analytics Vidhya
+    url: https://www.analyticsvidhya.com/feed/
+    category: developer
+    credibility: 0.80
+    priority: 3
+    update_frequency: daily
+    active: true
+
+  - name: KDnuggets
+    url: https://www.kdnuggets.com/feed
+    category: developer
+    credibility: 0.85
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  # Category 4: Social Media (10 sources)
+  - name: Reddit r/MachineLearning
+    url: https://www.reddit.com/r/MachineLearning/.rss
+    category: social
+    credibility: 0.75
+    priority: 3
+    update_frequency: hourly
+    active: true
+
+  - name: Reddit r/artificial
+    url: https://www.reddit.com/r/artificial/.rss
+    category: social
+    credibility: 0.70
+    priority: 3
+    update_frequency: hourly
+    active: true
+
+  - name: Reddit r/LocalLLaMA
+    url: https://www.reddit.com/r/LocalLLaMA/.rss
+    category: social
+    credibility: 0.75
+    priority: 3
+    update_frequency: hourly
+    active: true
+
+  - name: Reddit r/deeplearning
+    url: https://www.reddit.com/r/deeplearning/.rss
+    category: social
+    credibility: 0.75
+    priority: 3
+    update_frequency: hourly
+    active: true
+
+  - name: Reddit r/LanguageTechnology
+    url: https://www.reddit.com/r/LanguageTechnology/.rss
+    category: social
+    credibility: 0.75
+    priority: 3
+    update_frequency: daily
+    active: true
+
+  - name: Reddit r/computervision
+    url: https://www.reddit.com/r/computervision/.rss
+    category: social
+    credibility: 0.75
+    priority: 3
+    update_frequency: daily
+    active: true
+
+  - name: Reddit r/reinforcementlearning
+    url: https://www.reddit.com/r/reinforcementlearning/.rss
+    category: social
+    credibility: 0.75
+    priority: 3
+    update_frequency: daily
+    active: true
+
+  - name: Reddit r/ChatGPT
+    url: https://www.reddit.com/r/ChatGPT/.rss
+    category: social
+    credibility: 0.65
+    priority: 4
+    update_frequency: hourly
+    active: true
+
+  - name: Reddit r/OpenAI
+    url: https://www.reddit.com/r/OpenAI/.rss
+    category: social
+    credibility: 0.70
+    priority: 3
+    update_frequency: hourly
+    active: true
+
+  - name: Reddit r/singularity
+    url: https://www.reddit.com/r/singularity/.rss
+    category: social
+    credibility: 0.65
+    priority: 4
+    update_frequency: hourly
+    active: true
+
+  # Category 5: Industry Blogs (10 sources)
+  - name: OpenAI Blog
+    url: https://openai.com/blog/rss.xml
+    category: industry
+    credibility: 0.95
+    priority: 1
+    update_frequency: weekly
+    active: true
+
+  - name: Anthropic News
+    url: https://www.anthropic.com/feed.xml
+    category: industry
+    credibility: 0.95
+    priority: 1
+    update_frequency: weekly
+    active: true
+
+  - name: Google DeepMind Blog
+    url: https://deepmind.google/blog/rss.xml
+    category: industry
+    credibility: 0.95
+    priority: 1
+    update_frequency: weekly
+    active: true
+
+  - name: Meta AI Blog
+    url: https://ai.meta.com/blog/rss/
+    category: industry
+    credibility: 0.90
+    priority: 1
+    update_frequency: weekly
+    active: true
+
+  - name: Microsoft AI Blog
+    url: https://blogs.microsoft.com/ai/feed/
+    category: industry
+    credibility: 0.90
+    priority: 1
+    update_frequency: weekly
+    active: true
+
+  - name: Hugging Face Blog
+    url: https://huggingface.co/blog/feed.xml
+    category: industry
+    credibility: 0.90
+    priority: 1
+    update_frequency: weekly
+    active: true
+
+  - name: LangChain Blog
+    url: https://blog.langchain.dev/rss/
+    category: industry
+    credibility: 0.85
+    priority: 2
+    update_frequency: weekly
+    active: true
+
+  - name: NVIDIA AI Blog
+    url: https://blogs.nvidia.com/blog/category/deep-learning/feed/
+    category: industry
+    credibility: 0.90
+    priority: 1
+    update_frequency: weekly
+    active: true
+
+  - name: AWS ML Blog
+    url: https://aws.amazon.com/blogs/machine-learning/feed/
+    category: industry
+    credibility: 0.90
+    priority: 2
+    update_frequency: weekly
+    active: true
+
+  # RSS feed removed / returns 404 (Squarespace)
+  - name: Stability AI Blog
+    url: https://stability.ai/blog/rss.xml
+    category: industry
+    credibility: 0.85
+    priority: 2
+    update_frequency: weekly
+    active: false
+
+  # Category 6: More Sources (10 sources)
+  - name: AI News
+    url: https://www.artificialintelligence-news.com/feed/
+    category: more
+    credibility: 0.80
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  - name: Synced Review
+    url: https://syncedreview.com/feed/
+    category: more
+    credibility: 0.85
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  - name: The Gradient
+    url: https://thegradient.pub/rss/
+    category: more
+    credibility: 0.90
+    priority: 2
+    update_frequency: weekly
+    active: true
+
+  - name: Import AI
+    url: https://jack-clark.net/feed/
+    category: more
+    credibility: 0.90
+    priority: 2
+    update_frequency: weekly
+    active: true
+
+  - name: Last Week in AI
+    url: https://lastweekin.ai/feed
+    category: more
+    credibility: 0.85
+    priority: 2
+    update_frequency: weekly
+    active: true
+
+  - name: Marktechpost
+    url: https://www.marktechpost.com/feed/
+    category: more
+    credibility: 0.75
+    priority: 3
+    update_frequency: daily
+    active: true
+
+  - name: AI Business
+    url: https://aibusiness.com/rss.xml
+    category: more
+    credibility: 0.80
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  # Site disabled RSS feeds (returns plain text, not XML)
+  - name: Unite.AI
+    url: https://www.unite.ai/feed/
+    category: more
+    credibility: 0.80
+    priority: 2
+    update_frequency: daily
+    active: false
+
+  - name: AI Trends
+    url: https://www.aitrends.com/feed/
+    category: more
+    credibility: 0.80
+    priority: 2
+    update_frequency: daily
+    active: true
+
+  - name: The Decoder
+    url: https://the-decoder.com/feed/
+    category: more
+    credibility: 0.85
+    priority: 2
+    update_frequency: daily
+    active: true

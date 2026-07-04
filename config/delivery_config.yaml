@@ -1,0 +1,13 @@
+telegram:
+  enabled: true
+  max_message_length: 4000
+  parse_mode: Markdown
+
+email:
+  enabled: true
+  subject_prefix: "AI News Digest"
+  html_template: true
+
+newsletter:
+  output_dir: ./outputs/newsletters
+  filename_format: "{date}_newsletter.md"

@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "news_orchestrator": "./src/orchestrator.py:build_graph"
+  },
+  "env": ".env"
+}

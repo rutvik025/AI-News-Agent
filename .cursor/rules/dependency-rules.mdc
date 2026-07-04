@@ -1,0 +1,24 @@
+---
+description: Dependency management standards
+alwaysApply: true
+---
+
+# Dependency Rules
+
+Before adding any dependency:
+1. Check if the functionality exists already in the codebase
+2. Check if a built-in library covers the use case
+3. Evaluate: bundle size, license, maintenance status (last commit, open issues)
+4. Document the justification in the PR description
+5. Never add a library to solve a problem under 20 lines of code
+
+Banned patterns:
+- Moment.js → use date-fns or native Intl
+- Lodash for single utility functions → use native JS
+- Multiple HTTP client libraries in the same project
+- Any library with a GPL license in commercial projects
+
+Security:
+- npm audit must pass (no high or critical) in CI
+- pip audit must pass (no high or critical) in CI
+- Dependabot or Renovate must be configured on every repo

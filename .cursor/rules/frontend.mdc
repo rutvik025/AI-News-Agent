@@ -1,0 +1,50 @@
+---
+description: React/TypeScript frontend standards
+globs: frontend/**/*.{ts,tsx}
+---
+
+# Frontend Standards
+
+Every feature must contain exactly:
+api/
+components/
+hooks/
+pages/
+store/
+types/
+constants/
+utils/
+
+No standalone files directly inside a feature folder.
+
+TypeScript:
+- strict: true must be enabled in tsconfig.json
+- Never use `any` without an explicit eslint-disable comment and justification
+- All props typed with interfaces
+
+Components:
+- PascalCase filenames and exports
+- One component per file
+- No business logic inside components
+- Components call hooks; hooks call API functions
+
+Hooks:
+- useXxx.ts naming convention
+- Data fetching via React Query inside hooks
+- Never call APIs directly from components
+
+State management:
+- Server/API state → React Query only
+- Shared client state → Zustand store slice in feature/store/
+- Local UI state (one component) → useState
+- Never store server data in Zustand
+
+Imports:
+- Absolute imports only using @/ alias
+- Never use deep relative imports (../../..)
+- Never import from another feature directly
+
+Shared code:
+- Reusable components → frontend/src/shared/components/
+- Reusable hooks → frontend/src/shared/hooks/
+- Shared types → frontend/src/shared/types/
